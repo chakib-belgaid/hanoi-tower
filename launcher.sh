@@ -1,7 +1,7 @@
 #!/bin/bash 
 watcher()
 {
-    
+echo "running $1 with $2 tours iter n°$3"
 docker events --filter "image=$1" --format 'time ={{.Time}} status ={{.Status }} id ={{.ID}}'  > "$1.$2.$3.events"  & 
 watcher=$!
 name=$(echo "$1" | tr ':' _  ) 
