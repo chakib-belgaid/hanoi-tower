@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  hannoi_cpp_rec:
+    image: hannoi_cpp_rec
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
