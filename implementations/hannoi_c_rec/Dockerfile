@@ -1,7 +1,9 @@
-FROM gcc:5.4
+FROM powerapi:latest
 LABEL Name=hanoi_tower_c_rec Version=0.0.1 
-WORKDIR /hanoii
-ADD . /hanoii
-RUN apt-get -y update && apt-get install -y fortunes
-RUN gcc   main.c  -o hanoirec
-ENTRYPOINT ["./hanoirec"]
+RUN apt-get -y update && apt-get -y install gcc 
+
+ADD main.c .
+RUN gcc   main.c -O1 -o  hanoirec
+
+ENTRYPOINT ["./analyse.sh","./hanoirec"]
+CMD ["21"]
