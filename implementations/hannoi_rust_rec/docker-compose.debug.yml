@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  hannoi_rust_rec:
+    image: hannoi_rust_rec
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
