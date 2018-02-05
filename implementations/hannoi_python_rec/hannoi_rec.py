@@ -3,7 +3,7 @@ import sys
 def hanoi(ndisks, frome, to,via):
     if ndisks:
         hanoi(ndisks-1, frome,via,to)
-        print("Move disk %d from pole %d to pole %d" % (ndisks,frome,to))
+        #print("Move disk %d from pole %d to pole %d" % (ndisks,frome,to))
         hanoi(ndisks-1,via,to,frome)
  
 

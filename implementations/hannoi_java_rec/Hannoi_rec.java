@@ -5,7 +5,7 @@ public class Hannoi_rec {
         if (n >= 1)  
         {  
           move(n - 1, from, via, to);
-          System.out.println("Move disk "+n +" from pole " + from + " to pole " + to);
+         // System.out.println("Move disk "+n +" from pole " + from + " to pole " + to);
           move(n - 1, via, to, from);
         }
      }

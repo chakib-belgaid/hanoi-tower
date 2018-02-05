@@ -5,7 +5,7 @@ void move(int n, int from, int to, int via)
 {
   if (n > 0) {
     move(n - 1, from, via, to);
-    printf("Move disk %d from pole %d to pole %d\n",n, from, to);
+    //printf("Move disk %d from pole %d to pole %d\n",n, from, to);
     move(n - 1, via, to, from);
   }
 }

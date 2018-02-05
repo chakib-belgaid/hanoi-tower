@@ -8,7 +8,7 @@ using namespace std;
 void move(int n, int from, int to, int via) {
   if (n >= 1) {
     move(n - 1, from, via, to);
-    std::cout << "Move disk " << n << " from pole " << from << " to pole " << to << std::endl;
+    //std::cout << "Move disk " << n << " from pole " << from << " to pole " << to << std::endl;
     move(n - 1, via, to, from);
   }
 }
